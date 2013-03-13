@@ -1,0 +1,8 @@
+bug database
+	dont change middle card if target is disabled
+		1. press 8 4 times
+		2. drag from 7 to 8
+		Expected: middle card remains at 7
+		Actual: middle card is constrained to 8
+	clicking on the drinks labels has no effect
+	lower/higher 

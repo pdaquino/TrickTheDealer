@@ -1,0 +1,76 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="TrickTheDealer.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="help" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer x:Name="HelpScroller" Width="419"  Margin="15,10,0,0" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                <TextBlock HorizontalAlignment="Left" Margin="15,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" 
+            		Width="419">
+            		<Run Text="This app helps you play the drinking game called &quot;F*** the Dealer&quot;. It is important to notice that this app doesn't replace an actual card deck; it is intended to be used as a companion for enhancing your performance in a live game. That means that you'll be drinking less and making your friends drink more (on average).">
+            		</Run>
+            		<LineBreak/>
+            		<LineBreak/>
+            		<Run FontWeight="Bold" Text="How to use">
+            		</Run>
+            		<LineBreak/>
+            		<Run Text="• At the beginning of each round, the highlighted middle card is the optimal choice for a given aggressiveness level (more on that later). That means that a player that is guessing should choose that card as his or her first guess.&#xA;•&#x9;If the dealer says &quot;lower&quot;, then the optimal choice is the colored card that is lower than the highlighted middle card. The same applies if the dealer says &quot;higher&quot;.&#xA;•&#x9;After the dealer reveals the card, you should tap on the corresponding card in the app (if you tap the wrong card, just press &quot;undo&quot; in the app menu). The app needs this information to compute the optimal strategy. Just below each card is the count of how many have already been drawn. Make sure that the number shown matches the physical deck you are playing with.">
+            		</Run>
+            		<LineBreak/>
+            		<Run/>
+            		<LineBreak/>
+            		<Span>
+            			<Run FontWeight="Bold" Text="What is aggressiveness?"/>
+            		</Span>
+            		<LineBreak/>
+            		<Span>
+            			<Run Text="As a player (i.e. the person currently guessing), you might have two goals: drinking as little as possible and making the dealer drink as much as possible. This trade-off is captured in what we call &quot;aggressiveness&quot;. An extremely aggressive player only cares about making the dealer drink. Conversely, a conservative player would play it safe and avoid risks in order to minimize how much he or she drinks."/>
+            		</Span>
+            		<LineBreak/>
+            		<LineBreak/>
+            		<Span>
+            			<Run Text="Therefore, there usually isn't such a thing as an absolute &quot;optimal&quot; choice when a player is guessing – it really comes down to how aggressive that player wants to be. When using the app, you might want to play with the aggressiveness slider and see how the optimal strategies change. Here's a tip: if the cards are shown in a gold color, the strategy shown is "/>
+            		</Span>
+            		<Span FontStyle="Italic">
+            			<Run Text="actually "/>
+            		</Span>
+            		<Span>
+            			<Run Text="optimal for all aggressiveness levels. In other words, that strategy makes the player drink the least and the dealer drink the most, out of all possible strategies."/>
+            		</Span>
+            		<LineBreak/>
+            		<LineBreak/>
+            		<Span>
+            			<Run FontWeight="Bold" Text="Tips"/>
+            		</Span>
+            		<LineBreak/>
+            		<Run Text="•&#x9;In the bottom of the app you'll find the expected number of drinks if the player adopts that strategy currently displayed. Swiping sideways will show the expected number of drinks if the dealer says &quot;lower&quot; or &quot;higher&quot; (i.e. the conditional expectation). It's fun to try different aggressiveness levels and see how the expected number of drinks changes.&#xA;•&#x9;If you drag the highlighted middle card and drop it on another card, you can see what the optimal strategy is if the player starts by guessing that card.  For example, if the app says the optimal is to choose 9, but your friend guesses 3, you can see what the new optimal strategy looks like by dragging the highlight from 9 onto 3. You can also use this to see just how bad of a choice your friend made, by looking at the expected number of drinks (a number in parenthesis compares it to the optimal choice).&#xA;•&#x9;You can also do this drag-and-drop for the higher and lower card suggestions." />
+                </TextBlock>
+
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

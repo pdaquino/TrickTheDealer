@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{b8080ef0-6d35-4cb1-a95a-348a03466220}" Title="Screw The Dealer" RuntimeType="Silverlight" Version="1.0.0.1" Genre="apps.normal" Author="Frithjof Nerdrum and Pedro d'Aquino" Description="This app helps you play &quot;Screw the Dealer&quot; (also known as &quot;F-*** the Dealer&quot;)." Publisher="TrickTheDealer Co." BitsPerPixel="32">
+    <IconPath IsRelative="true" IsResource="false">AppIcon_all_sizes_99x99.png</IconPath>
+    <Capabilities>
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="TrickTheDealerToken" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">AppIcon_all_sizes_173x173.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>Screw The Dealer</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>
